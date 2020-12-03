@@ -69,7 +69,7 @@ class GCDTester extends ChiselFlatSpec {
     Array("firrtl")
   }
   for ( backendName <- backendNames ) {
-    "GCD" should s"calculate proper greatest common denominator (with $backendName)" in {
+    "GCD" should s"calculate proper greatest common denominator (with \$backendName)" in {
       Driver(() => new GCD, backendName) {
         c => new GCDUnitTester(c)
       } should be (true)
