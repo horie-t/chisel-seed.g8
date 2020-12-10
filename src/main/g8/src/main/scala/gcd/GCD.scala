@@ -32,3 +32,12 @@ class GCD extends Module {
   io.outputGCD := x
   io.outputValid := y === 0.U
 }
+
+/**
+  * Generate Verilog code.
+  */
+object VerilogEmitter extends App {
+  val writer = new PrintWriter("target/GCD.v")
+  writer.write(ChiselStage.emitVerilog(new GCD))
+  writer.close()
+}
