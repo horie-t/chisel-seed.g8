@@ -2,7 +2,10 @@
 
 package gcd
 
+import java.io.PrintWriter
+
 import chisel3._
+import chisel3.stage._
 
 /**
   * Compute GCD using subtraction method.
